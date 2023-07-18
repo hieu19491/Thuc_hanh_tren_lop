@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="so1" placeholder="Nhập số a">
+<input type="text" id="so2" placeholder="Nhập số b">
+<input type="text" id="so3" placeholder="Nhập số c">
+<button onclick="ketQua()">Check</button>
+<script>
+  function ketQua() {
+    let a = +document.getElementById("so1").value;
+    let b = +document.getElementById("so2").value;
+    let c = +document.getElementById("so3").value;
+    console.log(a,b,c)
+    let d;
+    if(a > b && a > c){
+      d = "a là số lớn nhất";
+      document.getElementById("d").innerHTML = d;
+    }else if(a < b && b > c){
+      d = "b là số lớn nhất";
+      document.getElementById("d").innerHTML = d;
+    }else {
+      d = "c là số lớn nhất";
+      document.getElementById("d").innerHTML = d;
+    }
+  }
+</script>
+<p id="d"></p>
+
+</body>
+</html>

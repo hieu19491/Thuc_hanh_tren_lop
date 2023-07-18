@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="diem" placeholder="Nhập điểm">
+<button onclick="xepHang()">Xếp hạng</button>
+
+<script>
+    function xepHang() {
+        let a = +document.getElementById("diem").value;
+        let ketqua;
+        if (a >= 80 && a <= 100){
+            ketqua = "Xếp loại: Học sinh tốt"
+            document.getElementById("ketqua").innerHTML = ketqua;
+        }
+        if (a < 80 && a >= 70 ) {
+            ketqua ="Xếp loại: Học sinh khá";
+            document.getElementById("ketqua").innerHTML = ketqua;
+        }
+        if (a < 70 && a >= 50){
+            ketqua = "Xếp loại: Học sinh trung bình";
+            document.getElementById("ketqua").innerHTML = ketqua;
+        }
+        if (a < 50 ){
+            ketqua = "Xếp loại: Học sinh yếu";
+            document.getElementById("ketqua").innerHTML = ketqua;
+        }
+        if (a > 100){
+            ketqua = "Nhập sai giá trị";
+            document.getElementById("ketqua").innerHTML = ketqua;
+        }
+    }
+
+</script>
+<p id="ketqua"></p>
+
+
+
+</body>
+</html>

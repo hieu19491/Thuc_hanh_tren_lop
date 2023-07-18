@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" id="tuoi" placeholder="Nhập tuổi">
+<button onclick="ketqua()">Check</button>
+
+<script>
+    function ketqua() {
+        let a = document.getElementById("tuoi").value;
+        let b;
+        if (a >= 18) {
+            b = "Bạn đủ tuổi vị thành niên";
+            document.getElementById("b").innerHTML = b;
+        } else {
+            b = "Bạn chưa đủ tuổi";
+            document.getElementById("b").innerHTML = b;
+        }
+    }
+</script>
+<p id="b"></p>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="so" placeholder="Nhập giá trị">
+<button onclick="result()">Check</button>
+<script>
+  function result() {
+    let a = +document.getElementById("so").value;
+    let b;
+    if (a % 2 == 0) {
+      b = "Hello";
+      document.getElementById("b").innerHTML = b;
+    }
+    if (a % 2 != 0) {
+      b = "Hi";
+      document.getElementById("b").innerHTML = b;
+    }
+  }
+</script>
+<p id="b"></p>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="so1" placeholder="Nhập số a">
+<input type="text" id="so2" placeholder="Nhập số b">
+<button onclick="ketQua()">Check</button>
+<script>
+  function ketQua() {
+    let a = +document.getElementById("so1").value;
+    let b = +document.getElementById("so2").value;
+    let c;
+    if(a > b){
+      c = a + b;
+      document.getElementById("c").innerHTML = c;
+    }else if(a < b){
+      c = (a * b);
+      document.getElementById("c").innerHTML = c;
+    }else {
+      c = "Hihi";
+      document.getElementById("c").innerHTML = c;
+    }
+  }
+</script>
+<p id="c"></p>
+
+</body>
+</html>
