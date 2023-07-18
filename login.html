@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td>Username:</td>
+        <td><input type="text" id="name" onchange="user()"></td>
+    </tr>
+    <tr>
+        <td>Password:</td>
+        <td><input type="password" id="pass" onchange="user"></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>
+            <button onclick="user()">Login</button>
+            <button onclick="reset()">Reset</button>
+        </td>
+    </tr>
+</table>
+
+<script>
+
+    function reset() {
+        document.getElementById("name").value = "";
+        document.getElementById("pass").value = "";
+    }
+
+    function user() {
+        let ten = document.getElementById("name").value;
+        let mk = document.getElementById("pass").value;
+        let thongBao;
+
+
+        if (ten == "Admin") {
+
+            if (mk == "") {
+                thongBao = "Nhập mật khẩu";
+                alert(thongBao);
+            } else if (mk == "TheMaster") {
+                thongBao = "WELLCOME";
+                alert(thongBao)
+            } else if (mk == "") {
+                thongBao = "Canceled";
+                alert(thongBao)
+            } else {
+                thongBao = "Wrong password";
+                alert(thongBao)
+            }
+        } else if (ten == null) {
+            thongBao = "Cancel";
+            alert(thongBao)
+        } else {
+            thongBao = "I dont know you";
+            alert(thongBao)
+        }
+    }
+
+</script>
+
+</body>
+</html>
+
