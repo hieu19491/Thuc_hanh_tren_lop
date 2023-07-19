@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let soPhut = +prompt("Nhập vào số phút: ")
+  let tien = 0;
+  if(soPhut < 10){
+    tien = 5000 * soPhut;
+  }else if (soPhut > 10 && soPhut < 20){
+    tien = 10000 * soPhut;
+  }else if(soPhut > 20){
+    tien = 20000 * soPhut;
+  }
+  alert(tien)
+</script>
+
+</body>
+</html>

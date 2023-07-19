@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let a = +prompt("Điểm bài kiểm tra: ")
+  let b = +prompt("Điểm thi giữa kỳ: ")
+  let c = +prompt("Điểm thi cuối kỳ: ")
+  let d = (a + b + c) / 3;
+  if (d >= 9){
+    alert("Xếp hạng học lực giỏi")
+  }else if ( d < 9 && d >= 7){
+    alert("Xếp hạng học lực khá")
+  }else if (d < 7 && d >= 5){
+    alert("Xếp hạng học lực trung bình")
+  }else {
+    alert("Xếp hạng học lực yếu")
+  }
+</script>
+</body>
+</html>
