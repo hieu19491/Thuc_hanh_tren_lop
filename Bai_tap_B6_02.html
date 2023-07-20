@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Phương trình bậc nhất</h1>
+<h3>ax + b = 0</h3>
+<input type="text" id="so1" placeholder="Nhập sô a: ">
+<input type="text" id="so2" placeholder="Nhập số b: ">
+<button onclick="ketQua()">Giải phương trình</button>
+<script>
+  function ketQua(){
+    let a = document.getElementById("so1").value;
+    let b = document.getElementById("so2").value;
+    let x;
+    if ( a == 0 && b == 0){
+      x = "Vô số nghiệm";
+    }else if ( a == 0 && b != 0){
+      x = "Phương trình vô nghiệm";
+    }else {
+      x = -b / a;
+    }
+    document.getElementById("x").innerHTML = x;
+  }
+</script>
+<p id="x"></p>
+
+</body>
+</html>

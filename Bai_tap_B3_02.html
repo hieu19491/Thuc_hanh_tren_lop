@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="canh" placeholder="Nhập cạnh: ">
+<button onclick="ketQua()">Tính diện tích hình vuông</button>
+<script>
+  function ketQua() {
+    let a = +document.getElementById("canh").value;
+    let dienTich = a * a;
+    dienTich = "Diện tích bằng: " + dienTich + "cm2";
+    document.getElementById("dienTich").innerHTML = dienTich;
+  }
+
+</script>
+<p id="dienTich"></p>
+</body>
+</html>

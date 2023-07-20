@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Tính giá điện sinh hoạt</h1>
+<p>Giá bán lẻ điện sinh hoạt:
+<ul>
+    <li>Bậc 1 (0 đến 50kWh): 1.728đ/kWh</li>
+    <li>Bậc 2 (51 đến 100kWh): 1.786/kWh</li>
+    <li>Bậc 3 (101 đến 200kWh): 2.074đ/kWh</li>
+    <li>Bậc 4 (201 đến 300kWh): 2.612đ/kWh</li>
+    <li>Bậc 5 (301 đến 400kWh): 2.919đ/kWh</li>
+    <li>Bậc 6 (401kWh trở lên): 3.015đ/kWh</li>
+</ul>
+</p>
+<input type="text" id="kWh" placeholder="Nhập số điện tiêu thụ: kWh">
+<button onclick="ketQua()">Check</button>
+<script>
+    function ketQua() {
+        let a = +document.getElementById("kWh").value;
+        let result;
+        let tien;
+        if (a <= 50) {
+            let b1;
+            b1 = a * 1728;
+            tien = b1 + (b1 * 8 / 100);
+
+        } else if (a > 51 && a <= 100) {
+            let b2;
+            b2 = 50 * 1728;
+            a = a - 50;
+            b2 = b2 + a * 1786;
+            tien = b2 + (8 / 100 * b2);
+
+        } else if (a > 100 && a <= 200) {
+            let b3;
+            b3 = 50 * 1728;
+            a = a - 50;
+            b3 = b3 + 50 * 1786;
+            a = a - 50;
+            b3 = b3 + a * 2074;
+            tien = b3 + (b3 * 8 / 100);
+
+        } else if (a > 200 && a <= 300) {
+            let b4;
+            b4 = 50 * 1728;
+            a = a - 50;
+            b4 = b4 + 50 * 1786;
+            a = a - 50;
+            b4 = b4 + 100 * 2074;
+            a = a - 100;
+            b4 = b4 + a * 2612;
+            tien = b4 + (b4 * 8 / 100);
+
+        } else if (a > 300 && a <= 400) {
+            let b5;
+            b5 = 50 * 1728;
+            a = a - 50;
+            b5 = b5 + 50 * 1786;
+            a = a - 50;
+            b5 = b5 + 100 * 2074;
+            a = a - 100;
+            b5 = b5 + 100 * 2612;
+            a = a - 100;
+            b5 = b5 + a * 2919;
+            tien = b5 + (b5 * 8 / 100);
+
+        } else {
+            let b6;
+            b6 = 50 * 1728;
+            a = a - 50;
+            b6 = b6 + 50 * 1786;
+            a = a - 50;
+            b6 = b6 + 100 * 2074;
+            a = a - 100;
+            b6 = b6 + 100 * 2612;
+            a = a - 100;
+            b6 = b6 + 100 * 2919;
+            a = a - 100;
+            b6 = b6 + a * 3015;
+            tien = b6 + (b6 * 8 / 100);
+        }
+        result = "Tổng tiền = " + tien + "đ";
+        document.getElementById("tongTien").innerHTML = result;
+
+    }
+</script>
+<p id="tongTien"></p>
+
+</body>
+</html>

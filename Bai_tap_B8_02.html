@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Kiểm tra tuổi một người</h1>
+<input type="text" id="age" placeholder="Nhập số: ">
+<button onclick="ketQua()">Kiểm tra</button>
+<script>
+  function ketQua(){
+    let a = document.getElementById("age").value;
+    let tuoi;
+    if (a > 0 && a < 120){
+      tuoi = "Đây là tuổi của 1 người";
+    }else {
+      tuoi = "Đây không phải là tuổi của 1 người";
+    }
+    document.getElementById("tuoi").innerHTML = tuoi;
+  }
+</script>
+<p id="tuoi"></p>
+</body>
+</html>

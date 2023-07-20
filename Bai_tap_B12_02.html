@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Tính lãi ngân hàng</h1>
+<input type="text" id="tienGui" placeholder="Nhập số tiền gửi: "> <br>
+<input type="text" id="laiSuat" placeholder="Nhập lãi suất: % năm"><br>
+<input type="text" id="thang" placeholder="Nhập số tháng gửi: "><br>
+<button onclick="ketQua()">Check</button>
+<script>
+  function ketQua(){
+    let a = +document.getElementById("tienGui").value;
+    let b = +document.getElementById("laiSuat").value;
+    let c = +document.getElementById("thang").value;
+    let d = 1000000
+    let tienLai;
+    tienLai = a * b / 100 / 12 * c;
+    let result;
+    result = "Sô tiền lãi = " + tienLai + "đ";
+    document.getElementById("result").innerHTML = result;
+
+  }
+</script>
+<p id="result"></p>
+
+</body>
+</html>

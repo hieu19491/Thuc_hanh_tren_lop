@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Kiểm tra 3 số thực có phải là cạnh của 1 tam giác không</h1>
+<input type="text" id="so1" placeholder="Nhập số a: ">
+<input type="text" id="so2" placeholder="Nhập số b: ">
+<input type="text" id="so3" placeholder="Nhập số c: ">
+<button onclick="ketQua()">Kiểm tra</button>
+<script>
+    function ketQua() {
+        let a = document.getElementById("so1").value;
+        let b = document.getElementById("so2").value;
+        let c = document.getElementById("so3").value;
+        let d;
+        if (a > 0 && b > 0 && c > 0) {
+            if (a + b > c && b + c > a && a + c > b) {
+                d = "a, b, c là cạnh của một tam giác";
+            } else {
+                d = "a, b, c không là cạnh của một tam giác";
+            }
+
+        } else {
+            d = "a, b, c không là cạnh của một tam giác";
+        }
+        document.getElementById("d").innerHTML = d;
+
+    }
+
+</script>
+<p id="d"></p>
+</body>
+</html>
