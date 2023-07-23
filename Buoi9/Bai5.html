@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="so1" placeholder="Nhập số a: ">
+<input type="text" id="so2" placeholder="Nhập số b: ">
+<button onclick="ketQua()">PRINT</button>
+<p id="result"></p>
+<script>
+  function ketQua() {
+    let a = +document.getElementById("so1").value;
+    let b = +document.getElementById("so2").value;
+    let result = "";
+    if (a < b) {
+      for (let i = a; i <= b; i++) {
+        if ( i % 2 != 0) {
+          continue;
+        }
+        result = result + '<h1>' + i + '</h1>';
+      }
+    } else {
+      for (let i = a; i >= b; i--) {
+        if ( i % 2 != 0) {
+          continue;
+        }
+        result = result + '<h2>' + i + '</h2>';
+      }
+    }
+    document.getElementById("result").innerHTML = result;
+  }
+</script>
+
+</body>
+</html>
