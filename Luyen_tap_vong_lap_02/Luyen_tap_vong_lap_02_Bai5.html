@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính lãi suất ngân hàng</title>
+</head>
+<body>
+<h1>Tính ngân hàng</h1>
+<input type="text" id="tienGoc" placeholder="Nhập số tiền gốc: ">
+<input type="text" id="soNam" placeholder="Nhập kỳ hạn: ">
+<input type="text" id="laiXuat" placeholder="Nhập lãi xuất vay: ">
+<button onclick="ketQua()">Tính lãi xuất kép</button>
+<p id="result"></p>
+
+<script>
+  function ketQua(){
+    let a = +document.getElementById("tienVay").value;
+    let b = +document.getElementById("soThang").value;
+    let c = +document.getElementById("laiXuat").value;
+    let tienLai = a * (b + c * ()  )
+  }
+
+</script>
+
+</body>
+</html>
