@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="number" placeholder="Nhập giá các giá trị vào mảng: ">
+<button onclick="them()">Thêm giá trị vào mảng</button>
+<button onclick="dem()">Đếm các số nguyên âm</button>
+<p id="mang"></p>
+<p id="check"></p>
+<script>
+  let arr = [];
+  function them(){
+    arr.push(+document.getElementById("number").value);
+    document.getElementById("mang").innerHTML = arr
+  }
+
+  function dem(){
+   let count = 0;
+      for (let i = 0; i < arr.length; i++) {
+          if( arr[i] < 0 ){
+              count++;
+          }
+      }
+      document.getElementById("check").innerHTML = count;
+  }
+
+
+</script>
+
+</body>
+</html>

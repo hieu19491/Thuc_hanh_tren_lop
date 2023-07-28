@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="number" placeholder="Nhập giá các giá trị vào mảng: ">
+<button onclick="them()">Thêm giá trị vào mảng</button>
+<br>
+<input type="text" id="number1" placeholder="Nhập phần tử V: ">
+<button onclick="kiemTra()">Kiểm tra phần tử</button>
+<p id="mang"></p>
+<p id="check"></p>
+<script>
+    let arr = [];
+    function them(){
+        arr.push(+document.getElementById("number").value);
+        document.getElementById("mang").innerHTML = arr
+    }
+
+    function kiemTra(){
+        let a = +document.getElementById("number1").value;
+        let b = false;
+        let ketQua;
+        for (let i = 0; i < arr.length; i++) {
+            if( a === arr[i]){
+                b = true;
+            }
+        }
+        if(b){
+            ketQua = " V is in the array";
+
+        } else {
+            ketQua = " V is not in the array";
+        }
+        document.getElementById("check").innerHTML = ketQua;
+    }
+
+
+</script>
+
+</body>
+</html>

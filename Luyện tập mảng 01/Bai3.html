@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = [12, 5, 20, 6, 15, 3, 10, 8, 1, 9];
+    let iMax = arr[0];
+    let count = 0;
+    let sum = 0;
+    let trungBinh;
+
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] > iMax) {
+            iMax = arr[i];
+        }
+    }
+    for (let i = 0; i < arr.length; i++) {
+        sum = sum + arr[i];
+        count += 1;
+        trungBinh = sum / count;
+    }
+    document.write("Số lớn nhất trong mảng là: " + iMax + "<br>")
+    document.write("Trung bình các giá trị trong mảng = " + trungBinh)
+</script>
+
+</body>
+</html>

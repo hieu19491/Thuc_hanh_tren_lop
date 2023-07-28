@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="number" placeholder="Mảng a: ">
+<button onclick="mang1()">Thêm phần tử</button>
+<br>
+<input type="text" id="number1" placeholder="Mảng b: ">
+<button onclick="mang2()">Thêm phần tử</button>
+<br>
+<button onclick="gop()">Gộp 2 mảng</button>
+<p id="mangA"></p>
+<p id="mangB"></p>
+<p id="mangC"></p>
+
+<script>
+  let arr = [];
+  let arr1 = [];
+  function mang1(){
+    arr.push(+document.getElementById("number").value);
+    document.getElementById("mangA").innerHTML = arr
+  }
+  function mang2(){
+    arr1.push(+document.getElementById("number1").value);
+    document.getElementById("mangB").innerHTML = arr1
+  }
+
+  function gop(){
+    let gopMang = arr.concat(arr1);
+    document.getElementById("mangC").innerHTML = gopMang;
+
+  }
+</script>
+</body>
+</html>
